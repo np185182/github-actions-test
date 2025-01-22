@@ -45,6 +45,11 @@ jobs:
         run: |
           npm init -y
           npm install
+      - name: creating some env variables
+        run: |
+          echo "NEW_VAR=new variable" >> $GITHUB_ENV
+          echo $NEW_VAR
+          
 
   deploy:
       runs-on: ubuntu-latest
