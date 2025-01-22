@@ -37,7 +37,9 @@ jobs:
       - name: Setup node.js env
         uses: actions/setup-node@v4.1.0
       - name: Installing all packages
-        run: npm install
+        run: |
+          touch package.json
+          npm install
 
   deploy:
       runs-on: ubuntu-latest
