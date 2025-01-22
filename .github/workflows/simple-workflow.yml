@@ -43,3 +43,4 @@ jobs:
 
       - name: Hi
         run: echo "Deployment Started"
+        if: github.ref == 'refs/heads/main'
